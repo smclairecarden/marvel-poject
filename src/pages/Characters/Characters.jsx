@@ -20,6 +20,7 @@ const Characters = (props) => {
               {character.name}
             </Link>
           </div>
+          
         ))}
       </div>
     </>

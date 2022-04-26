@@ -4,27 +4,28 @@ import { useLocation } from 'react-router-dom';
 
 const CharacterDetails = (props) => {
   const [characterDetails, setCharacterDetails] = useState({})
+  const [photo, setPhoto] = useState({})
   let location = useLocation()
 
   useEffect(() => {
-    console.log(location.state.character)
     getCharacterDetails(location.state.character.id)
     .then(character => setCharacterDetails(character.data.results[0]))
+  }, [])
+
+  useEffect(() => {
+    console.log(location.state.character.thumbnail.path)
+    setPhoto(`${location.state.character.thumbnail.path}/portrait_xlarge.jpg`)
   }, [])
 
   return (
     <>
       <div>
-        <h1>Details</h1>
-        {characterDetails ?
         <>
-        <h2>{characterDetails.name}</h2>
-        </>
-        :
-        <>
+        <h1>{characterDetails.name} Details</h1>
+        <img src={photo} alt="character" />
+        <p>{characterDetails.description}</p>
         
-        </>  
-      }
+        </>
       </div>
     </>
   )
