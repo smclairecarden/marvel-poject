@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { getCharacterDetails } from '../../services/api-calls';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 const CharacterDetails = (props) => {
   const [characterDetails, setCharacterDetails] = useState({})
@@ -14,17 +14,19 @@ const CharacterDetails = (props) => {
 
   useEffect(() => {
     console.log(location.state.character.thumbnail.path)
-    setPhoto(`${location.state.character.thumbnail.path}/portrait_xlarge.jpg`)
+    setPhoto(`${location.state.character.thumbnail.path}/portrait_incredible.jpg`)
   }, [])
 
   return (
     <>
       <div>
         <>
-        <h1>{characterDetails.name} Details</h1>
+        <h1>{characterDetails.name}</h1>
         <img src={photo} alt="character" />
         <p>{characterDetails.description}</p>
-        
+        <Link to="/characters">
+          <button>Back To List</button>
+        </Link>
         </>
       </div>
     </>
