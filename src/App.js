@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import {Routes, Route} from 'react-router-dom'
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
+import Characters from './pages/Characters/Characters';
 
 function App() {
 const [navItems, setNavItems] = useState([
@@ -12,9 +14,10 @@ const [navItems, setNavItems] = useState([
     <div className="App">
       <>
         <NavBar navItems={navItems} />
+        <Routes>
+          <Route path="/characters" element={<Characters />}/>
+        </Routes>
       </>
-      <h1>Marvelpalooza!</h1>
-      
     </div>
   );
 }
