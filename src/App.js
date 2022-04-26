@@ -3,6 +3,7 @@ import {Routes, Route} from 'react-router-dom'
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import Characters from './pages/Characters/Characters';
+import CharacterDetails from './pages/CharacterDetails/CharacterDetails';
 
 function App() {
 const [navItems, setNavItems] = useState([
@@ -16,6 +17,7 @@ const [navItems, setNavItems] = useState([
         <NavBar navItems={navItems} />
         <Routes>
           <Route path="/characters" element={<Characters />}/>
+          <Route path="/details" element={<CharacterDetails />}/>
         </Routes>
       </>
     </div>

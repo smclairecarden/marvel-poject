@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getCharacters } from '../../services/api-calls';
+import { Link } from 'react-router-dom'
 
 const Characters = (props) => {
   const [characters, setCharacters] = useState([])
@@ -15,7 +16,9 @@ const Characters = (props) => {
         <h1>List of Marvel Characters</h1>
         {characters.map((character) => (
           <div key={character.name}>
-            {character.name}
+            <Link to="/details" state={{character}}>
+              {character.name}
+            </Link>
           </div>
         ))}
       </div>
