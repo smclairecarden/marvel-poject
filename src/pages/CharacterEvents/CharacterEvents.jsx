@@ -14,7 +14,7 @@ const CharacterEvents = (props) => {
     <>
       <h1>Character Events</h1>
 
-          <div key={events.title}>
+          <div key={events.id}>
             <h1>{events.title}</h1>
             <p>{events.description}</p>
           </div>

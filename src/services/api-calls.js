@@ -18,6 +18,11 @@ export function getEvents(Id) {
 }
 
 export function getComics() {
-  return fetch(`${baseURL}comics?ts=${process.env.REACT_APP_TS}&apikey=${process.env.REACT_APP_API_KEY}&hash=${process.env.REACT_APP_HASH}`)
+  return fetch(`${baseURL}comics?limit=100&ts=${process.env.REACT_APP_TS}&apikey=${process.env.REACT_APP_API_KEY}&hash=${process.env.REACT_APP_HASH}`)
+  .then(res => res.json())
+}
+
+export function getComicDetails(Id) {
+  return fetch(`${baseURL}comics/${Id}?ts=${process.env.REACT_APP_TS}&apikey=${process.env.REACT_APP_API_KEY}&hash=${process.env.REACT_APP_HASH}`)
   .then(res => res.json())
 }
