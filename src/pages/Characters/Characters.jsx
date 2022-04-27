@@ -6,12 +6,6 @@ import { characterSearch } from '../../services/api-calls';
 const Characters = (props) => {
   const [characters, setCharacters] = useState([])
 
-
-  // useEffect(() => {
-  //   getCharacters()
-  //   .then(characterData => setCharacters(characterData.data.results))
-  // }, [])
-
   const handleCharacterSearch = formData => {
     characterSearch(formData)
     .then(characterResults => {

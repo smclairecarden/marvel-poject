@@ -5,6 +5,8 @@ import NavBar from './components/NavBar/NavBar';
 import Characters from './pages/Characters/Characters';
 import CharacterDetails from './pages/CharacterDetails/CharacterDetails';
 import HomePage from './pages/HomePage/HomePage';
+import CharacterEvents from './pages/CharacterEvents/CharacterEvents';
+import Comics from './pages/Comics/Comics';
 
 function App() {
 const [navItems, setNavItems] = useState([
@@ -20,6 +22,8 @@ const [navItems, setNavItems] = useState([
           <Route path="/characters" element={<Characters />}/>
           <Route path="/details" element={<CharacterDetails />}/>
           <Route path="/" element={<HomePage />}/>
+          <Route path="/events" element={<CharacterEvents />}/>
+          <Route path="/comics" element={<Comics />}/>
         </Routes>
       </>
     </div>
