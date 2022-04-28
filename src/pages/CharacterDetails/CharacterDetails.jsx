@@ -29,8 +29,8 @@ const CharacterDetails = (props) => {
         :
         <p>No Description Available</p>
         } 
-        <div key={characterDetails.id}>
-        <p>See story events {characterDetails.name} has been a part of <Link to='/events' state={{characterDetails}}>here</Link></p>
+        <div>
+        <p key={characterDetails.id}>See story events {characterDetails.name} has been a part of <Link to='/events' state={{characterDetails}}>here</Link></p>
         </div>
         <Link to="/characters" >
           <button>Back To Search</button>

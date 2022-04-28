@@ -1,23 +1,28 @@
 import { useState, useEffect } from "react"
 import { getEvents } from "../../services/api-calls"
-import { Link } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 
 const CharacterEvents = (props) => {
   const [events, setEvents] = useState([])
+  let location = useLocation()
 
   useEffect(() => {
-    getEvents()
-    .then(eventData => console.log(eventData))
+    console.log(location.state.characterDetails.id)
+    getEvents(location.state.characterDetails.id)
+    .then(eventData => setEvents(eventData.data.results))
   }, [])
 
   return (
     <>
       <h1>Character Events</h1>
-
+      <>
+        {events.map(event =>
           <div key={events.id}>
-            <h1>{events.title}</h1>
-            <p>{events.description}</p>
+            <h1>{event.title}</h1>
+            <p>{event.description}</p>
           </div>
+        )}
+      </>
     </>
   )
 }
