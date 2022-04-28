@@ -22,12 +22,18 @@ const CharacterDetails = (props) => {
         <>
         <h1>{characterDetails.name}</h1>
         <img src={photo} alt="character" />
-        <p>{characterDetails.description}</p>
+        {characterDetails.description ?
+        <>
+        <p>Description: {characterDetails.description}</p>
+        </>
+        :
+        <p>No Description Available</p>
+        } 
         <div key={characterDetails.id}>
         <p>See story events {characterDetails.name} has been a part of <Link to='/events' state={{characterDetails}}>here</Link></p>
         </div>
         <Link to="/characters" >
-          <button>Back To List</button>
+          <button>Back To Search</button>
         </Link>
         </>
       </div>

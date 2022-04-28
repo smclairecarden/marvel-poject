@@ -4,7 +4,7 @@ import { useLocation, Link } from 'react-router-dom';
 
 const ComicDetails = (props) => {
   const [comicDetails, setComicDetails] = useState([])
-  const [photo, setPhoto] = useState({})
+  const [photos, setPhotos] = useState({})
   let location = useLocation()
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const ComicDetails = (props) => {
   }, [])
 
   useEffect(() => {
-    setPhoto(`${location.state.comic.images[0]?.path}/portrait_incredible.jpg`)
+    setPhotos(`${location.state.comic.images[0]?.path}/portrait_incredible.jpg`)
   }, [])
 
   return (
@@ -23,16 +23,27 @@ const ComicDetails = (props) => {
       <div key={comicDetails.title}>
         <>
         <h1>{comicDetails.title}</h1>
-        {photo.length > 0 ?
+        {photos ?
         <>
-        
-        <img src={photo} alt="comic" />
+        <img src={photos} alt="" />
         </>
         :
-        <p></p>
+        <p>No photo available</p>
         }
-        <p>{comicDetails.description}</p>
-        <p>{comicDetails.issueNumber}</p>
+        {comicDetails.description ?
+        <>
+        <p>Description: {comicDetails.description}</p>
+        </>
+        :
+        <p>No Description Available</p>
+        } 
+        {comicDetails.issueNumber ?
+        <>
+        <p>Issue Number: {comicDetails.issueNumber}</p>
+        </>
+        :
+        <p>No Issue Number Available</p>
+        }     
         <Link to="/comics" >
           <button>Back To List</button>
         </Link>
