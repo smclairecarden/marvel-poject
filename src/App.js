@@ -11,6 +11,7 @@ import ComicDetails from './pages/ComicDetails/ComicDetails';
 
 function App() {
 const [navItems, setNavItems] = useState([
+  {url: "/", name: 'Home'},
   {url: "/characters", name: "Characters"},
   {url: "/comics", name: "Comics"}
 ])

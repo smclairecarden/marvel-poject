@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { getEvents } from "../../services/api-calls"
-import { useLocation } from "react-router-dom"
+import { useLocation, Link } from "react-router-dom"
 
 const CharacterEvents = (props) => {
   const [events, setEvents] = useState([])
@@ -15,6 +15,9 @@ const CharacterEvents = (props) => {
   return (
     <>
       <h1>Character Events</h1>
+      <Link to="/characters">
+          <button>Back To Search</button>
+      </Link>
       <>
         {events.map(event =>
           <div key={events.id}>
