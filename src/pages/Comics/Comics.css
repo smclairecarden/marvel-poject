@@ -1,4 +1,11 @@
+.comic-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .comic-card {
-  border: 1rem solid yellow;
-  margin: 20%;
+  border: .25rem solid yellow;
+  margin: 1%;
+  max-width: 10rem;
 }
