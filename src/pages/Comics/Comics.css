@@ -5,7 +5,17 @@
 }
 
 .comic-card {
-  border: .25rem solid yellow;
+  /* border: .25rem solid yellow; */
   margin: 1%;
   max-width: 10rem;
+  min-height: 5rem;
+  background-color: #2E3192;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+}
+
+.comic-card > * {
+  color: whitesmoke;
+  flex-wrap: wrap;
 }
