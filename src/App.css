@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #EC1D25;
   height: 4rem;
   display: flex;
   flex-direction: row;
@@ -12,7 +12,22 @@
   font-size: calc(10px + 2vmin);
 }
 
+.App-header > * {
+  color: white;
+  text-decoration: none;
+  padding: 1%;
+  font-weight: bold;
+}
+
 .App-link {
   color: #61dafb;
 }
 
+.submit-button, .search {
+  margin: .25rem;
+  padding: .5rem;
+}
+
+body {
+  text-decoration: none;
+}

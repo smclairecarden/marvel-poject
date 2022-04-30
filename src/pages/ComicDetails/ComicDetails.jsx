@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { getComicDetails } from '../../services/api-calls';
 import { useLocation, Link } from 'react-router-dom';
+import './ComicDetails.css'
 
 const ComicDetails = (props) => {
   const [comicDetails, setComicDetails] = useState([])
@@ -20,9 +21,12 @@ const ComicDetails = (props) => {
 
   return (
     <>
-      <div key={comicDetails.title}>
+      <div class="detail-page" key={comicDetails.title}>
+
         <>
+        <div class="detail-card">
         <h1>{comicDetails.title}</h1>
+        
         {photos ?
         <>
         <img src={photos} alt="" />
@@ -43,10 +47,12 @@ const ComicDetails = (props) => {
         </>
         :
         <p>No Issue Number Available</p>
+        
         }     
         <Link to="/comics" >
           <button>Back To List</button>
         </Link>
+        </div>
         </>
       </div>
     </>

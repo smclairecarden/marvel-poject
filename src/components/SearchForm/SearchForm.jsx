@@ -15,14 +15,16 @@ const SearchForm = (props) => {
   return (
     <>
       <div>
-        <form onSubmit={handleSubmit}>
-          <input name="query" 
+        <form class="form" onSubmit={handleSubmit}>
+          <input 
+          class="search"
+          name="query" 
           type="text" 
           autoComplete="off"
           value={formData.query}
           onChange={handleChange}
           />
-          <button type="submit">Search</button>
+          <button class="submit-button" type="submit">Search</button>
         </form>
       </div>
     </>

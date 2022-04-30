@@ -1,0 +1,12 @@
+.detail-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.detail-card {
+  border: .25rem solid yellow;
+  margin: 1%;
+  max-width: 15rem;
+  justify-content: center;
+}

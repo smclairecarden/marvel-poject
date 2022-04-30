@@ -1,0 +1,14 @@
+.home-h1 {
+  font-size: 4rem;
+}
+
+.home-p {
+  font-size: 2rem;
+}
+
+.home-text {
+  border: .5rem solid yellow;
+  align-items: center;
+  margin: 2%;
+  padding: 2%;
+}

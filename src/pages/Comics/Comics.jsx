@@ -16,9 +16,9 @@ const Comics = (props) => {
         <h1>Marvel Comics</h1>
         <>
         {comics?.map(comic => 
-          <div key={comic.title}>
-            <Link to="/comic-details" state={{comic}}>
-              {comic.title}
+          <div className='comic-card' key={comic.title}>
+            <Link style={{ textDecoration: 'none' }}  to="/comic-details" state={{comic}}>
+              <h4>{comic.title}</h4>
             </Link>
           </div>
         )}
