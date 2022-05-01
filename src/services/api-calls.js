@@ -26,3 +26,8 @@ export function getComicDetails(Id) {
   return fetch(`${baseURL}comics/${Id}?ts=${process.env.REACT_APP_TS}&apikey=${process.env.REACT_APP_API_KEY}&hash=${process.env.REACT_APP_HASH}`)
   .then(res => res.json())
 }
+
+export function getSeries(Id) {
+  return fetch(`${baseURL}characters/${Id}/series?ts=${process.env.REACT_APP_TS}&apikey=${process.env.REACT_APP_API_KEY}&hash=${process.env.REACT_APP_HASH}`)
+  .then(res => res.json())
+}

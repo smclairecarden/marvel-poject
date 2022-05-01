@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { getCharacterDetails } from '../../services/api-calls';
 import { useLocation, Link } from 'react-router-dom';
+import './CharacterDetails.css'
 
 const CharacterDetails = (props) => {
   const [characterDetails, setCharacterDetails] = useState([])
@@ -24,7 +25,7 @@ const CharacterDetails = (props) => {
         <img src={photo} alt="character" />
         {characterDetails.description ?
         <>
-        <p>Description: {characterDetails.description}</p>
+        <p><span className="description">Description</span>: {characterDetails.description}</p>
         </>
         :
         <p>No Description Available</p>

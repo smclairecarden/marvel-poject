@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage/HomePage';
 import CharacterEvents from './pages/CharacterEvents/CharacterEvents';
 import Comics from './pages/Comics/Comics';
 import ComicDetails from './pages/ComicDetails/ComicDetails';
+import CharacterSeries from './pages/CharacterSeries/CharacterSeries';
 
 function App() {
 const [navItems, setNavItems] = useState([
@@ -27,6 +28,7 @@ const [navItems, setNavItems] = useState([
           <Route path="/events" element={<CharacterEvents />}/>
           <Route path="/comics" element={<Comics />}/>
           <Route path="/comic-details" element={<ComicDetails />}/>
+          <Route path="/series" element={<CharacterSeries />}/>
         </Routes>
       </>
     </div>
