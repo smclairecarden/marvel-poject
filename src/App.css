@@ -31,3 +31,9 @@
 body {
   text-decoration: none;
 }
+
+button {
+  background-color: #EC1D25;
+  color: whitesmoke;
+  padding: .5rem;
+}

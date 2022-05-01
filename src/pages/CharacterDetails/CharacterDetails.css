@@ -1,3 +1,16 @@
 .description {
+  margin: 1% 20%;
+}
+
+.events, .series {
+  text-transform: uppercase;
   font-weight: bold;
+}
+
+.events > *, .series > * {
+  color: black;
+}
+
+.events > *:hover, .series > *:hover {
+  color: #EC1D25;
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import SearchForm from '../../components/SearchForm/SearchForm';
 import { characterSearch } from '../../services/api-calls';
+import './Characters.css'
 
 const Characters = (props) => {
   const [characters, setCharacters] = useState([])
@@ -22,8 +23,8 @@ const Characters = (props) => {
         <>
         {characters?.map(character => 
           <div key={character.name}>
-            <Link to="/details" state={{character}}>
-              {character.name}
+            <Link style={{ textDecoration: 'none' }} to="/details" state={{character}}>
+              <h3 className='charactername'>{character.name}</h3>
             </Link>
           </div>
         )}

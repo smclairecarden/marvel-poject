@@ -1,13 +1,16 @@
 .home-h1 {
   font-size: 4rem;
+  color: #EC1D25;
+  font-weight: bold;
 }
 
 .home-p {
   font-size: 2rem;
+  color: #EC1D25;
 }
 
 .home-text {
-  border: .5rem solid yellow;
+  border: .5rem solid #2E3192;
   align-items: center;
   margin: 2%;
   padding: 2%;

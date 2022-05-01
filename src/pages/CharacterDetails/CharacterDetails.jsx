@@ -25,15 +25,16 @@ const CharacterDetails = (props) => {
         <img src={photo} alt="character" />
         {characterDetails.description ?
         <>
-        <p><span className="description">Description</span>: {characterDetails.description}</p>
+        <p className="description">{characterDetails.description}</p>
         </>
         :
-        <p>No Description Available</p>
+        <p className="description">No Description Available</p>
         } 
         <div>
-        <p key={characterDetails.id}>See story events {characterDetails.name} has been a part of <Link to='/events' state={{characterDetails}}>here</Link></p>
-        <p key={characterDetails.id}>See series {characterDetails
-        .name} has been a part of: <Link to='/series' state={{characterDetails}}>here</Link></p>
+        <p className ="events" key={characterDetails.id}><Link style={{ textDecoration: 'none' }} to='/events' state={{characterDetails}}> {characterDetails
+        .name}'s Story Events</Link></p>
+        <p className="series" key={characterDetails.id}><Link style={{ textDecoration: 'none' }} to='/series' state={{characterDetails}}>{characterDetails
+          .name}'s Series</Link></p>
         </div>
         <Link to="/characters" >
           <button>Back To Search</button>

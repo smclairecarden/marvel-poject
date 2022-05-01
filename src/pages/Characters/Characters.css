@@ -1,0 +1,9 @@
+.charactername {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: black;
+}
+
+.charactername:hover {
+  color: #EC1D25;
+}
