@@ -37,3 +37,11 @@ button {
   color: whitesmoke;
   padding: .5rem;
 }
+
+h1 {
+  font-family: 'Bebas Neue', cursive;
+}
+
+h2, h3, h4, p {
+  font-family: 'Roboto', sans-serif;
+}

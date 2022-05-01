@@ -2,6 +2,8 @@
   text-transform: uppercase;
   font-weight: bold;
   color: black;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
 }
 
 .charactername:hover {
