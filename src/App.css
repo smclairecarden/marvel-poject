@@ -17,6 +17,7 @@
   text-decoration: none;
   padding: 1%;
   font-weight: bold;
+  font-family: 'Bebas Neue', cursive;
 }
 
 .App-link {
@@ -36,9 +37,10 @@ button {
   background-color: #EC1D25;
   color: whitesmoke;
   padding: .5rem;
+  font-size: 1remy;
 }
 
-h1 {
+h1, button {
   font-family: 'Bebas Neue', cursive;
 }
 

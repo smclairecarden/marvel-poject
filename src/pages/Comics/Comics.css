@@ -19,3 +19,7 @@
   color: whitesmoke;
   flex-wrap: wrap;
 }
+
+.comic-card > *:hover {
+  color: #EC1D25;
+}
