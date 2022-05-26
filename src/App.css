@@ -40,6 +40,10 @@ button {
   font-size: 1remy;
 }
 
+button:hover {
+  color: #2E3192;
+}
+
 h1, button {
   font-family: 'Bebas Neue', cursive;
 }
